@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 
 var app = express();
-app.set('port', app.env.PORT || 3000)
+app.set('port', (process.env.PORT || 3000));
 
 // set static path middleware
 app.use(express.static(path.join(__dirname, 'public')))
